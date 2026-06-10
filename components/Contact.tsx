@@ -13,7 +13,25 @@ import {
   PhoneIcon,
 } from "./ui/Icons";
 
-const contactCards = [
+type ContactCard =
+  | {
+      icon: typeof MailIcon;
+      label: string;
+      href: string;
+      value: string;
+    }
+  | {
+      icon: typeof PhoneIcon;
+      label: string;
+      phones: string[];
+    }
+  | {
+      icon: typeof MapPinIcon;
+      label: string;
+      value: string;
+    };
+
+const contactCards: ContactCard[] = [
   {
     icon: MailIcon,
     label: "Email",
@@ -23,8 +41,7 @@ const contactCards = [
   {
     icon: PhoneIcon,
     label: "Phone",
-    value: siteConfig.phone,
-    href: `tel:${siteConfig.phone.replace(/\s/g, "")}`,
+    phones: siteConfig.phones,
   },
   {
     icon: MapPinIcon,
@@ -75,12 +92,26 @@ export default function Contact() {
                 <p className="text-sm font-semibold uppercase tracking-wider text-muted">
                   {card.label}
                 </p>
-                <p className="break-all text-sm text-gray-200">{card.value}</p>
+                {"phones" in card ? (
+                  <div className="flex flex-col gap-2">
+                    {card.phones.map((phone) => (
+                      <a
+                        key={phone}
+                        href={`tel:${phone.replace(/\s/g, "")}`}
+                        className="text-sm text-gray-200 transition-colors hover:text-blue-300"
+                      >
+                        {phone}
+                      </a>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="break-all text-sm text-gray-200">{card.value}</p>
+                )}
               </motion.div>
             );
             return (
               <StaggerItem key={card.label}>
-                {card.href ? (
+                {"href" in card ? (
                   <a href={card.href} className="block h-full">
                     {content}
                   </a>

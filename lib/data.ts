@@ -7,10 +7,10 @@ export const siteConfig = {
   name: "Sahani Rajapakshe",
   initials: "SR",
   title: "AI & Full Stack Software Engineer",
-  location: "Dubai, UAE",
+  location: "Sri Lanka / Dubai, UAE",
   locationDetail: "Open to remote & hybrid roles globally",
   email: "sahanisineka@gmail.com",
-  phone: "+971 50 466 7598",
+  phones: ["+971 55 237 4987", "+971 50 466 7598"],
   linkedin: "https://www.linkedin.com/in/sahanirajapakshe/",
   github: "https://github.com/sahani94rajapakshe",
   resumeFile: "/Resume_Sahani-Rajapakshe.pdf",
@@ -292,4 +292,4 @@ export const navLinks = [
   { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ];
-
+
