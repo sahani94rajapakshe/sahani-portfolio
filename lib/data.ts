@@ -200,11 +200,37 @@ export type Project = {
   techStack: string[];
   category: "personal" | "professional";
   company?: string;
+  status?: string;
   githubUrl?: string;
+  githubPlaceholder?: boolean;
   demoUrl?: string;
 };
 
 export const projects: Project[] = [
+  {
+    title: "AI-Powered Financial Crime Investigation Copilot",
+    category: "personal",
+    status: "Ongoing Personal Project",
+    description:
+      "Developed a financial crime investigation platform using ASP.NET Core 9, PostgreSQL, CQRS, MediatR, and Clean Architecture.",
+    highlights: [
+      "Developed customer, account, and transaction management services using RESTful APIs and PostgreSQL.",
+      "Implemented scalable architecture using Clean Architecture, CQRS, and MediatR.",
+      "Designed the foundation for AI-assisted fraud investigation, risk scoring, relationship analysis, and automated investigation report generation.",
+      "Built the project to explore AI integration and modern backend architecture patterns.",
+    ],
+    techStack: [
+      "ASP.NET Core 9",
+      "C#",
+      "PostgreSQL",
+      "CQRS",
+      "MediatR",
+      "Clean Architecture",
+      "REST APIs",
+      "JWT Authentication",
+    ],
+    githubPlaceholder: true,
+  },
   {
     title: "AI Product Enrichment Platform",
     category: "professional",
