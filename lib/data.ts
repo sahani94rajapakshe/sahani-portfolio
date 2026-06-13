@@ -201,6 +201,7 @@ export type Project = {
   category: "personal" | "professional";
   company?: string;
   status?: string;
+  statusDetail?: string;
   githubUrl?: string;
   githubPlaceholder?: boolean;
   demoUrl?: string;
@@ -230,6 +231,35 @@ export const projects: Project[] = [
       "JWT Authentication",
     ],
     githubPlaceholder: true,
+  },
+  {
+    title: "AI-Powered Omnichannel Customer Support & Analytics Platform",
+    category: "personal",
+    status: "Ongoing Personal Project",
+    statusDetail: "Phase 2 in progress · In development",
+    description:
+      "Building a production-grade AI support platform for retail — automating customer inquiries across email, chat, WhatsApp, and social media with NLP, RAG, and intelligent escalation. Designed as a mini enterprise support system with analytics for management.",
+    highlights: [
+      "Built multi-stage ML pipeline: data cleaning, weak-supervision labeling, and train/val/test splits from Enron email and Twitter Customer Support datasets.",
+      "Implemented 8-class intent detection (Order Tracking, Refund, Return, Complaint, Product Inquiry, etc.) and sentiment analysis using Hugging Face transformers.",
+      "Created fine-tuning scripts for DistilBERT (intent), RoBERTa (sentiment), and T5-small (response generation) with evaluation reporting.",
+      "Built RAG knowledge retrieval using Sentence Transformers over FAQ and product catalog to deliver grounded answers.",
+      "Documented full 7-phase architecture (Python AI + ASP.NET Core + PostgreSQL + RabbitMQ + Azure) with living progress tracking.",
+    ],
+    techStack: [
+      "Python",
+      "Hugging Face",
+      "DistilBERT",
+      "RoBERTa",
+      "T5",
+      "RAG",
+      "Sentence Transformers",
+      "FastAPI",
+      "ASP.NET Core",
+      "PostgreSQL",
+      "Azure",
+    ],
+    githubUrl: "https://github.com/sahani94rajapakshe/retail-customer-support-ai",
   },
   {
     title: "AI Product Enrichment Platform",

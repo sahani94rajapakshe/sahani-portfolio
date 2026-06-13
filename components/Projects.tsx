@@ -99,6 +99,9 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
                   <span className="text-xs text-muted">{project.company}</span>
                 )}
               </div>
+              {project.statusDetail && (
+                <p className="mb-1 text-xs text-muted">{project.statusDetail}</p>
+              )}
               <h3 className="text-xl font-bold text-white transition-colors duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 group-hover:bg-clip-text group-hover:text-transparent">
                 {project.title}
               </h3>
