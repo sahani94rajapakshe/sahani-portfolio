@@ -97,7 +97,7 @@ export default function Contact() {
                     {card.phones.map((phone) => (
                       <a
                         key={phone}
-                        href={`tel:${phone.replace(/\s/g, "")}`}
+                        href={`tel:${phone.replace(/[^\d+]/g, "")}`}
                         className="text-sm text-gray-200 transition-colors hover:text-blue-300"
                       >
                         {phone}

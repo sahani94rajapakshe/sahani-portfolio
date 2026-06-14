@@ -10,7 +10,7 @@ export const siteConfig = {
   location: "Sri Lanka / Dubai, UAE",
   locationDetail: "Open to remote & hybrid roles globally",
   email: "sahanisineka@gmail.com",
-  phones: ["+971 55 237 4987", "+971 50 466 7598"],
+  phones: ["+94 70 599 2413 (SL)", "+971 55 237 4987 (UAE)"],
   linkedin: "https://www.linkedin.com/in/sahanirajapakshe/",
   github: "https://github.com/sahani94rajapakshe",
   resumeFile: "/Resume_Sahani-Rajapakshe.pdf",
@@ -230,7 +230,7 @@ export const projects: Project[] = [
       "REST APIs",
       "JWT Authentication",
     ],
-    githubPlaceholder: true,
+    githubUrl: "https://github.com/sahani94rajapakshe/sentinel-aml",
   },
   {
     title: "AI-Powered Omnichannel Customer Support & Analytics Platform",
